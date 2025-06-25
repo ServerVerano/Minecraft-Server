@@ -1,0 +1,568 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 2025-03-18 21:14:36
+Description: Watching Server
+
+java.lang.Error: Watchdog
+	at java.base@23.0.2/java.util.Objects.hashCode(Objects.java:97)
+	at java.base@23.0.2/java.util.HashMap$Node.hashCode(HashMap.java:299)
+	at java.base@23.0.2/java.util.AbstractMap.hashCode(AbstractMap.java:500)
+	at com.mojang.brigadier.tree.CommandNode.hashCode(CommandNode.java:134)
+	at com.mojang.brigadier.tree.LiteralCommandNode.hashCode(LiteralCommandNode.java:103)
+	at java.base@23.0.2/java.util.Objects.hashCode(Objects.java:97)
+	at java.base@23.0.2/java.util.HashMap$Node.hashCode(HashMap.java:299)
+	at java.base@23.0.2/java.util.AbstractMap.hashCode(AbstractMap.java:500)
+	at com.mojang.brigadier.tree.CommandNode.hashCode(CommandNode.java:134)
+	at com.mojang.brigadier.tree.LiteralCommandNode.hashCode(LiteralCommandNode.java:103)
+	at java.base@23.0.2/java.util.HashMap.hash(HashMap.java:338)
+	at java.base@23.0.2/java.util.HashMap.getNode(HashMap.java:577)
+	at java.base@23.0.2/java.util.HashMap.get(HashMap.java:565)
+	at ds.a(SourceFile:361)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:338)
+	at alu.a(SourceFile:659)
+	at alu.d(SourceFile:560)
+	at alu.a(SourceFile:215)
+	at ajk.a(SourceFile:131)
+	at ajk.d(SourceFile:118)
+	at ajk.c(SourceFile:68)
+	at sq.a(SourceFile:254)
+	at ajh.c(SourceFile:172)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:912)
+	at ahq.b(SourceFile:283)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:828)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:675)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:266)
+	at net.minecraft.server.MinecraftServer$$Lambda/0x00000203c08ebc08.run(Unknown Source)
+	at java.base@23.0.2/java.lang.Thread.runWith(Thread.java:1588)
+	at java.base@23.0.2/java.lang.Thread.run(Thread.java:1575)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at java.base@23.0.2/java.util.Objects.hashCode(Objects.java:97)
+	at java.base@23.0.2/java.util.HashMap$Node.hashCode(HashMap.java:299)
+	at java.base@23.0.2/java.util.AbstractMap.hashCode(AbstractMap.java:500)
+	at com.mojang.brigadier.tree.CommandNode.hashCode(CommandNode.java:134)
+	at com.mojang.brigadier.tree.LiteralCommandNode.hashCode(LiteralCommandNode.java:103)
+	at java.base@23.0.2/java.util.Objects.hashCode(Objects.java:97)
+	at java.base@23.0.2/java.util.HashMap$Node.hashCode(HashMap.java:299)
+	at java.base@23.0.2/java.util.AbstractMap.hashCode(AbstractMap.java:500)
+	at com.mojang.brigadier.tree.CommandNode.hashCode(CommandNode.java:134)
+	at com.mojang.brigadier.tree.LiteralCommandNode.hashCode(LiteralCommandNode.java:103)
+	at java.base@23.0.2/java.util.HashMap.hash(HashMap.java:338)
+	at java.base@23.0.2/java.util.HashMap.getNode(HashMap.java:577)
+	at java.base@23.0.2/java.util.HashMap.get(HashMap.java:565)
+	at ds.a(SourceFile:361)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:367)
+	at ds.a(SourceFile:338)
+	at alu.a(SourceFile:659)
+	at alu.d(SourceFile:560)
+	at alu.a(SourceFile:215)
+	at ajk.a(SourceFile:131)
+	at ajk.d(SourceFile:118)
+	at ajk.c(SourceFile:68)
+	at sq.a(SourceFile:254)
+	at ajh.c(SourceFile:172)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:912)
+	at ahq.b(SourceFile:283)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:828)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:675)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:266)
+	at net.minecraft.server.MinecraftServer$$Lambda/0x00000203c08ebc08.run(Unknown Source)
+
+-- Thread Dump --
+Details:
+	Threads: "Reference Handler" daemon prio=10 Id=9 RUNNABLE
+	at java.base@23.0.2/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@23.0.2/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+	at java.base@23.0.2/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+
+"Finalizer" daemon prio=8 Id=10 WAITING on java.lang.ref.NativeReferenceQueue$Lock@2b0bbb1f
+	at java.base@23.0.2/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.ref.NativeReferenceQueue$Lock@2b0bbb1f
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:378)
+	at java.base@23.0.2/java.lang.Object.wait(Object.java:352)
+	at java.base@23.0.2/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:166)
+	at java.base@23.0.2/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+	at java.base@23.0.2/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+
+"Signal Dispatcher" daemon prio=9 Id=11 RUNNABLE
+
+
+"Attach Listener" daemon prio=5 Id=12 RUNNABLE
+
+
+"Notification Thread" daemon prio=9 Id=19 RUNNABLE
+
+
+"Common-Cleaner" daemon prio=8 Id=20 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@25cc400e
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@25cc400e
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:79)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:151)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:229)
+	at java.base@23.0.2/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+	at java.base@23.0.2/java.lang.Thread.runWith(Thread.java:1588)
+	...
+
+
+"DestroyJavaVM" prio=5 Id=22 RUNNABLE
+
+
+"JNA Cleaner" daemon prio=5 Id=26 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@21f3d06f
+	at java.base@23.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@21f3d06f
+	at java.base@23.0.2/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:4023)
+	at java.base@23.0.2/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3969)
+	at java.base@23.0.2/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:75)
+	at java.base@23.0.2/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:166)
+	...
+
+
+"Timer hack thread" daemon prio=5 Id=38 TIMED_WAITING
+	at java.base@23.0.2/java.lang.Thread.sleepNanos0(Native Method)
+	at java.base@23.0.2/java.lang.Thread.sleepNanos(Thread.java:496)
+	at java.base@23.0.2/java.lang.Thread.sleep(Thread.java:527)
+	at ac$9.run(SourceFile:822)
+
+
+"Server thread" prio=8 Id=50 RUNNABLE
+	at java.base@23.0.2/java.util.Objects.hashCode(Objects.java:97)
+	at java.base@23.0.2/java.util.HashMap$Node.hashCode(HashMap.java:299)
+	at java.base@23.0.2/java.util.AbstractMap.hashCode(AbstractMap.java:500)
+	at com.mojang.brigadier.tree.CommandNode.hashCode(CommandNode.java:134)
+	at com.mojang.brigadier.tree.LiteralCommandNode.hashCode(LiteralCommandNode.java:103)
+	at java.base@23.0.2/java.util.Objects.hashCode(Objects.java:97)
+	at java.base@23.0.2/java.util.HashMap$Node.hashCode(HashMap.java:299)
+	at java.base@23.0.2/java.util.AbstractMap.hashCode(AbstractMap.java:500)
+	...
+
+
+"Server console handler" daemon prio=8 Id=52 RUNNABLE (in native)
+	at java.base@23.0.2/java.io.FileInputStream.readBytes(Native Method)
+	at java.base@23.0.2/java.io.FileInputStream.read(FileInputStream.java:328)
+	at java.base@23.0.2/java.lang.System$In.read(System.java:2252)
+	at java.base@23.0.2/java.io.BufferedInputStream.read1(BufferedInputStream.java:345)
+	at java.base@23.0.2/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	at java.base@23.0.2/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base@23.0.2/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:350)
+	at java.base@23.0.2/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:393)
+	...
+
+	Number of locked synchronizers = 3
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@1254c6f7
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@555f2883
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@6a10faef
+
+
+"Netty Server IO #0" daemon prio=5 Id=53 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4deb57a
+	-  locked sun.nio.ch.WEPollSelectorImpl@3089a868
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Server Watchdog" daemon prio=8 Id=58 RUNNABLE
+	at java.management@23.0.2/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@23.0.2/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:518)
+	at java.management@23.0.2/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:506)
+	at aht.run(SourceFile:47)
+	at java.base@23.0.2/java.lang.Thread.runWith(Thread.java:1588)
+	at java.base@23.0.2/java.lang.Thread.run(Thread.java:1575)
+
+
+"Netty Server IO #1" daemon prio=5 Id=61 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@1c3e85ca
+	-  locked sun.nio.ch.WEPollSelectorImpl@7114d320
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #2" daemon prio=5 Id=63 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@90cd1d
+	-  locked sun.nio.ch.WEPollSelectorImpl@7d27ff8f
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #3" daemon prio=5 Id=66 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@155f2534
+	-  locked sun.nio.ch.WEPollSelectorImpl@4205696c
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #4" daemon prio=5 Id=67 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@44fbbc14
+	-  locked sun.nio.ch.WEPollSelectorImpl@6e2e883
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #5" daemon prio=5 Id=68 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6af80bee
+	-  locked sun.nio.ch.WEPollSelectorImpl@3df51d4
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #6" daemon prio=5 Id=84 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@1a5d46a7
+	-  locked sun.nio.ch.WEPollSelectorImpl@b6a139f
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #7" daemon prio=5 Id=85 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@21e7de67
+	-  locked sun.nio.ch.WEPollSelectorImpl@58cf6a7e
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #8" daemon prio=5 Id=86 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@285767be
+	-  locked sun.nio.ch.WEPollSelectorImpl@737a7fc0
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #9" daemon prio=5 Id=87 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@6cf1932e
+	-  locked sun.nio.ch.WEPollSelectorImpl@4fce9854
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #10" daemon prio=5 Id=101 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@5c377c84
+	-  locked sun.nio.ch.WEPollSelectorImpl@7c938cbd
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #11" daemon prio=5 Id=102 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@1c1b08e2
+	-  locked sun.nio.ch.WEPollSelectorImpl@27ac2f0d
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #12" daemon prio=5 Id=103 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4098a420
+	-  locked sun.nio.ch.WEPollSelectorImpl@208e2eea
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #13" daemon prio=5 Id=104 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #14" daemon prio=5 Id=105 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #15" daemon prio=5 Id=106 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #16" daemon prio=5 Id=107 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #17" daemon prio=5 Id=127 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #18" daemon prio=5 Id=130 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #19" daemon prio=5 Id=131 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #20" daemon prio=5 Id=132 BLOCKED on java.util.Collections$SynchronizedRandomAccessList@64f14a35 owned by "Server thread" Id=50
+	at java.base@23.0.2/java.util.Collections$SynchronizedCollection.add(Collections.java:2325)
+	-  blocked on java.util.Collections$SynchronizedRandomAccessList@64f14a35
+	at ajh$1.initChannel(SourceFile:101)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:129)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:112)
+	at io.netty.channel.AbstractChannelHandlerContext.callHandlerAdded(AbstractChannelHandlerContext.java:938)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:609)
+	at io.netty.channel.DefaultChannelPipeline.access$100(DefaultChannelPipeline.java:46)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1463)
+	...
+
+
+"Netty Server IO #21" daemon prio=5 Id=133 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@64966e01
+	-  locked sun.nio.ch.WEPollSelectorImpl@2204f1d9
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #22" daemon prio=5 Id=134 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@27b8e81d
+	-  locked sun.nio.ch.WEPollSelectorImpl@76106b7e
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+"Netty Server IO #23" daemon prio=5 Id=152 RUNNABLE (in native)
+	at java.base@23.0.2/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@23.0.2/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@2121e5db
+	-  locked sun.nio.ch.WEPollSelectorImpl@24ae421f
+	at java.base@23.0.2/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:147)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:879)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	...
+
+
+
+Stacktrace:
+	at aht.run(SourceFile:63)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+-- Performance stats --
+Details:
+	Random tick rate: 3
+	Level stats: ResourceKey[minecraft:dimension / minecraft:overworld]: players: 1, entities: 62,62,49,529,529,0,0 [minecraft:polar_bear:27,minecraft:pig:8,minecraft:sheep:5,minecraft:wolf:4,minecraft:chest_minecart:4], block_entities: 71 [minecraft:mob_spawner:56,minecraft:piston:7,minecraft:hopper:5,minecraft:daylight_detector:2,minecraft:beehive:1], block_ticks: 3, fluid_ticks: 0, chunk_source: Chunks[S] W: 3050 E: 62,62,49,529,529,0,0,
+ResourceKey[minecraft:dimension / minecraft:the_end]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / minecraft:the_nether]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.4
+	Minecraft Version ID: 1.19.4
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 23.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 4404480384 bytes (4200 MiB) / 8589934592 bytes (8192 MiB) up to 10737418240 bytes (10240 MiB)
+	CPUs: 12
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 5 5600G with Radeon Graphics         
+	Identifier: AuthenticAMD Family 25 Model 80 Stepping 0
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.89
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: AMD Radeon RX 6750 XT
+	Graphics card #0 vendor: Advanced Micro Devices, Inc. (0x1002)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x73df
+	Graphics card #0 versionInfo: DriverVersion=32.0.12033.1030
+	Memory slot #0 capacity (MB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 34683.03
+	Virtual memory used (MB): 25730.29
+	Swap memory total (MB): 2048.00
+	Swap memory used (MB): 51.14
+	JVM Flags: 2 total; -Xmx10240M -Xms8192M
+	Server Running: true
+	Player Count: 1 / 3; [aiq['refkunMC'/22654, l='ServerLevel[world]', x=1156.43, y=64.00, z=678.30]]
+	Data Packs: vanilla, file/bukkit
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Is Modded: Probably not. Server jar signature and brand is untouched
+	Type: Dedicated Server (map_server.txt)
