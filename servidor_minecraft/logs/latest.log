@@ -39,3 +39,15 @@
 [18:30:46] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
 [18:33:43] [Server thread/INFO]: [refkunMC: Set own game mode to Creative Mode]
 [18:34:35] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
+[18:36:27] [Server thread/INFO]: [refkunMC: Saved the game]
+[18:36:34] [Server thread/INFO]: [refkunMC: Stopping the server]
+[18:36:34] [Server thread/INFO]: Stopping server
+[18:36:34] [Server thread/INFO]: Saving players
+[18:36:34] [Server thread/INFO]: Saving worlds
+[18:36:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[18:36:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[18:36:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
