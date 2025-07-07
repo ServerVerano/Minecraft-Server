@@ -33,3 +33,20 @@
 [22:16:30] [Server thread/INFO]: refkunMC joined the game
 [22:20:17] [Server thread/INFO]: [refkunMC: Set own game mode to Creative Mode]
 [22:21:58] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
+[22:43:25] [Server thread/INFO]: [refkunMC: Set own game mode to Creative Mode]
+[22:43:37] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
+[22:47:47] [Server thread/INFO]: [refkunMC: Set own game mode to Creative Mode]
+[22:49:40] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
+[22:51:59] [Server thread/INFO]: refkunMC lost connection: Disconnected
+[22:51:59] [Server thread/INFO]: refkunMC left the game
+[22:52:29] [Server thread/INFO]: Stopping the server
+[22:52:29] [Server thread/INFO]: Stopping server
+[22:52:29] [Server thread/INFO]: Saving players
+[22:52:29] [Server thread/INFO]: Saving worlds
+[22:52:30] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[22:52:30] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[22:52:30] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[22:52:30] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[22:52:30] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[22:52:30] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[22:52:30] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
