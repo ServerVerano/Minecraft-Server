@@ -1,53 +1,35 @@
-[17:55:27] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[17:55:29] [ServerMain/INFO]: Loaded 7 recipes
-[17:55:29] [ServerMain/INFO]: Loaded 1179 advancements
-[17:55:30] [Server thread/INFO]: Starting minecraft server version 1.19.4
-[17:55:30] [Server thread/INFO]: Loading properties
-[17:55:30] [Server thread/INFO]: Default game type: SURVIVAL
-[17:55:30] [Server thread/INFO]: Generating keypair
-[17:55:30] [Server thread/INFO]: Starting Minecraft server on *:25565
-[17:55:30] [Server thread/INFO]: Using epoll channel type
-[17:55:30] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[17:55:30] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[17:55:30] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[17:55:30] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[17:55:30] [Server thread/INFO]: Preparing level "world"
-[17:55:33] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[17:55:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[17:55:37] [Worker-Main-2/INFO]: Preparing spawn area: 0%
-[17:55:38] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[17:55:38] [Worker-Main-3/INFO]: Preparing spawn area: 1%
-[17:55:39] [Worker-Main-2/INFO]: Preparing spawn area: 61%
-[17:55:39] [Server thread/INFO]: Time elapsed: 6401 ms
-[17:55:39] [Server thread/INFO]: Done (9.461s)! For help, type "help"
-[17:55:42] [Server thread/INFO]: refkunMC[/127.113.26.116:53821] logged in with entity id 77 at (87.876078733774, 60.0, -4.614040522575401)
-[17:55:42] [Server thread/INFO]: refkunMC joined the game
-[18:03:13] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
-[18:03:17] [Server thread/INFO]: refkunMC lost connection: Disconnected
-[18:03:17] [Server thread/INFO]: refkunMC left the game
-[18:05:39] [Server thread/INFO]: refkunMC[/127.113.26.116:37351] logged in with entity id 741 at (83.3502775835944, 63.0, 3.4557483346414166)
-[18:05:39] [Server thread/INFO]: refkunMC joined the game
-[18:05:55] [Server thread/INFO]: [refkunMC: Set own game mode to Creative Mode]
-[18:30:46] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
-[18:33:43] [Server thread/INFO]: [refkunMC: Set own game mode to Creative Mode]
-[18:34:35] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
-[18:36:27] [Server thread/INFO]: [refkunMC: Saved the game]
-[18:36:34] [Server thread/INFO]: [refkunMC: Stopping the server]
-[18:36:34] [Server thread/INFO]: Stopping server
-[18:36:34] [Server thread/INFO]: Saving players
-[18:36:34] [Server thread/INFO]: Saving worlds
-[18:36:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[18:36:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[18:36:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
-[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[18:36:35] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[22:16:09] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[22:16:10] [ServerMain/INFO]: Loaded 7 recipes
+[22:16:10] [ServerMain/INFO]: Loaded 1179 advancements
+[22:16:11] [Server thread/INFO]: Starting minecraft server version 1.19.4
+[22:16:11] [Server thread/INFO]: Loading properties
+[22:16:11] [Server thread/INFO]: Default game type: SURVIVAL
+[22:16:11] [Server thread/INFO]: Generating keypair
+[22:16:11] [Server thread/INFO]: Starting Minecraft server on *:25565
+[22:16:11] [Server thread/INFO]: Using epoll channel type
+[22:16:11] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[22:16:11] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[22:16:11] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[22:16:11] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[22:16:11] [Server thread/INFO]: Preparing level "world"
+[22:16:14] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[22:16:18] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[22:16:18] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[22:16:18] [Worker-Main-2/INFO]: Preparing spawn area: 0%
+[22:16:18] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[22:16:18] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[22:16:18] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[22:16:18] [Worker-Main-2/INFO]: Preparing spawn area: 0%
+[22:16:18] [Worker-Main-2/INFO]: Preparing spawn area: 0%
+[22:16:19] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[22:16:19] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[22:16:19] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[22:16:20] [Worker-Main-2/INFO]: Preparing spawn area: 0%
+[22:16:20] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[22:16:21] [Worker-Main-2/INFO]: Preparing spawn area: 24%
+[22:16:21] [Server thread/INFO]: Time elapsed: 6958 ms
+[22:16:21] [Server thread/INFO]: Done (10.169s)! For help, type "help"
+[22:16:30] [Server thread/INFO]: refkunMC[/127.236.40.244:56799] logged in with entity id 100 at (83.48199666250245, 64.125, 3.706723803961654)
+[22:16:30] [Server thread/INFO]: refkunMC joined the game
+[22:20:17] [Server thread/INFO]: [refkunMC: Set own game mode to Creative Mode]
+[22:21:58] [Server thread/INFO]: [refkunMC: Set own game mode to Survival Mode]
